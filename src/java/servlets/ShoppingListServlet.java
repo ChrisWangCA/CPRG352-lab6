@@ -51,7 +51,6 @@ public class ShoppingListServlet extends HttpServlet {
             session.setAttribute("username", username);
             session.setAttribute("item", item);
             request.setAttribute("username", username);
-            request.setAttribute("list", item);
             getServletContext().getRequestDispatcher("/WEB-INF/shoppingList.jsp").forward(request, response);
             return;
         }else if (action != null && action.equals("add")){
